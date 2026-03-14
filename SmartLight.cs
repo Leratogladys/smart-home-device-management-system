@@ -12,6 +12,13 @@ namespace SHDMS
         {
             Brightness = brightness;
         }
+        SmartLight livingRoomLight = new SmartLight("Living Room", Manufacturer.philips, 80);
+
+        SmartLight kitchenLight = new SmartLight("Kitchen Light", lifx, 65);
+
+        SmartLight bedroomLight = new SmartLight("Bedroom Light", philips, 50);
+
+        SmartLight gamingRoomLight = new SmartLight("Gaming Room Light", nanoleaf, 90);
 
         public void SetBrightness(int brightness)
         {

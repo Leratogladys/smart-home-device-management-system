@@ -16,6 +16,13 @@ namespace SHDMS
             BatteryLevel = batteryLevel;
         }
 
+        SmartThermostat hallwayThermostat = new SmartThermostat("Hallway Thermostat", Manufacturer.nest, 21.5, 70);
+
+        SmartThermostat bedroomThermostat = new SmartThermostat("Bedroom Thermostat", ecobee, 20.0, 85);
+
+        SmartThermostat officeThermostat = new SmartThermostat("Office Thermostat", nest, 22.0, 60);
+
+
         public void SetTemperature(double temperature)
         {
             Temperature = temperature;
@@ -23,7 +30,7 @@ namespace SHDMS
 
         public override string GetStatus()
         {
-            return $"Temperature: {Temperature} " + $" | Power: {GetPowerStatus}";
+            return $"Temperature: {Temperature}°C  Battery: {BatteryLevel}% | Power: {GetPowerStatus}";
         }
 
         public string Charge()
