@@ -1,81 +1,75 @@
-Smart Home Device Management System (SHDMS)
-Overview
+# Smart Home Device Management System
 
-The Smart Home Device Management System (SHDMS) is a C# .NET console application that simulates the management of various smart home devices. The project demonstrates key object-oriented programming principles such as inheritance, encapsulation, polymorphism, and interface implementation.
+A C#/.NET console project demonstrating object-oriented modelling for smart-home devices.
 
-This project was developed as part of a software development assessment to showcase the ability to design modular and extensible systems using C# and .NET.
+## Overview
 
-Features
+This project models several smart-device types through a shared base class, specialised subclasses, and interfaces. It focuses on core object-oriented design rather than data persistence.
 
-Manage multiple smart home devices
+## What the Public Repository Demonstrates
 
-Control device power states
+- C# and .NET console development
+- Inheritance
+- Encapsulation
+- Polymorphism
+- Interface implementation
+- Device-specific behaviour
+- Reusable manufacturer/device relationships
 
-Adjust device-specific functionality such as brightness and temperature
+## Domain Model
 
-Simulate battery-powered devices
+### Base Class
 
-Extend functionality through inheritance and interfaces
+`SmartDevice`
 
-Technologies Used
+Represents shared device information and behaviour such as identity, manufacturer details, and power state.
 
-C#
+### Device Types
 
-.NET
+- `SmartLight`
+- `SmartThermostat`
+- `SmartDoorLock`
 
-Object-Oriented Programming (OOP)
+### Interfaces
 
-Visual Studio 2022
+- `IBatteryPowered`
+- `ISmartDoorLock`
 
-System Design
-Base Class
+Interfaces are used to model capabilities that do not belong to every device type.
 
-SmartDevice
+## Example Responsibilities
 
-Name
+- Toggle device power state
+- Adjust light brightness
+- Set thermostat temperature
+- Lock/unlock a smart door lock
+- Track and recharge battery-powered devices
+- Return formatted device status information
 
-Manufacturer
+## Tech Stack
 
-Power Status
+- C#
+- .NET
+- Object-Oriented Programming
+- Visual Studio
 
-Power control methods
+## Learning Focus
 
-Derived Classes
+The project demonstrates practical understanding of:
 
-SmartLight
+- Designing a reusable class hierarchy
+- Overriding behaviour in derived classes
+- Protecting state through controlled property setters
+- Using interfaces for capability-based design
+- Keeping device-specific responsibilities inside the correct classes
 
-SmartThermostat
+## Important Repository Note
 
-SmartDoorLock
+This repository represents the **OOP smart-home project currently available publicly**. It does **not** currently contain the later EF Core/SQLite persistence layer discussed in other coursework. Those capabilities should only be advertised publicly once the completed assignment version has been pushed to GitHub.
 
-Interfaces
+## Author
 
-IBatteryPowered
+**Lerato Molefe**
 
-BatteryLevel
-
-Charge()
-
-Example Output
-
-Brightness: 80% | Power: On
-Temperature: 22°C | Power: On
-Locked: True | Battery: 100%
-
-Learning Objectives
-
-This project demonstrates practical understanding of:
-
-Class inheritance
-
-Method overriding
-
-Encapsulation through controlled property setters
-
-Interface implementation
-
-Clean object-oriented design
-
-Author
-
-Dev Lerato
+- Portfolio: https://leratogladys.github.io/Portfolio
+- GitHub: https://github.com/Leratogladys
